@@ -1,16 +1,27 @@
-# This is a sample Python script.
+class SuperHero:
+    people = 'people'
+    def __init__(self, name, nickname, superpower, health_points, catchphrase):
+        self.name = name
+        self.nickname = nickname
+        self.superpower = superpower
+        self.health_points = health_points
+        self.catchphrase = catchphrase
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+    def names(self):
+        return self.name
 
+    def double_health(self):
+        return self.health_points * 2
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+    def __str__(self):
+        return f" его  прозвище {self.nickname}  его супер  {self.superpower}  и  его здоровье { self.health_points}"
 
+    def __len__(self):
+        return len(self.catchphrase)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+hero = SuperHero('Mirlan', 'LOrd', 'BLASTERs', 100, "im not died")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(hero.names())
+print(hero.double_health())
+print(hero)
+print(len(hero.catchphrase))
